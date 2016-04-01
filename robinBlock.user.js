@@ -25,10 +25,12 @@ function blockPhrase() {
     var phrase = document.getElementById("boxBlock").value;
     var conatinsPhrase = ".robin-message--message:contains('" +  phrase + "')";
     window.setInterval(function(){$(conatinsPhrase).parent().hide();},10);
+    document.getElementById("boxBlock").value = "";
 }
 
 function blockUser() {
     var userName = document.getElementById("boxBlock").value;
     var conatinsName = ".robin-message--from.robin--username:contains('" + userName + "')";
     window.setInterval(function(){$(conatinsName).parent().hide();},10);
+    document.getElementById("boxBlock").value = "";
 }
